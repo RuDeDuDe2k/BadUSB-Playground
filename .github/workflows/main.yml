@@ -64,6 +64,6 @@ jobs:
           cat BadUSB-Playground-${{ steps.date.outputs.date }}.tar.zst.* > BadUSB-Playground-${{ steps.date.outputs.date }}.tar.zst
           ```
         files: |
-          ${{ steps.check_size.outputs.split == 'true' && format('snapshot-{0}.tar.zst.*', steps.date.outputs.date) || format('snapshot-{0}.tar.zst', steps.date.outputs.date) }}
+          ${{ steps.check_size.outputs.split == 'true' && format('BadUSB-Playground-{0}.tar.zst.*', steps.date.outputs.date) || format('BadUSB-Playground-{0}.tar.zst', steps.date.outputs.date) }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
